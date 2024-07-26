@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url("/imgs/photo.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Anton", sans-serif;
+  --img-width: 153px;
+  --img-height: 200px;
+}
+
+#chanteuse {
+  height: var(--img-height);
+  width: var(--img-width);
+  position: absolute;
+  top: calc(100% - var(--img-height));
+  left: calc(100% - var(--img-width));
+  animation-duration: 6s;
+  animation-name: moveface;
+  animation-iteration-count: infinite;
+}
+
+#opensource-block {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(6, 17, 72, 0.9);
+}
+
+#opensource-block p {
+  margin-top: 70px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+#cheers {
+  font-size: 1.6em;
+}
+
+#budlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 70%;
+  max-height: 80%;
+}
+
+#close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  height: 25px;
+  cursor: pointer;
+}
+
+#opensource-block a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 8px 20px;
+}
+
+#btn-container {
+  text-align: right;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    --img-width: 115px;
+    --img-height: 150px;
+  }
+}
+
+@keyframes moveface {
+  0% {
+    top: calc(0%);
+    left: calc(0%);
+  }
+
+  25% {
+    top: calc(0%);
+    left: calc(100% - var(--img-width));
+  }
+
+  50% {
+    top: calc(100% - var(--img-height));
+    left: calc(100% - var(--img-width));
+  }
+
+  75% {
+    top: calc(100% - var(--img-height));
+    left: calc(0%);
+  }
+
+  100% {
+    top: calc(0%);
+    left: calc(0%);
+  }
+}
