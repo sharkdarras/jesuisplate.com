@@ -6,6 +6,16 @@ import GoogleAnalytics from "./google-analytics";
 export const metadata: Metadata = {
   title: "Je suis plate!",
   description: "On est plate ou on l'est pas.",
+  openGraph: {
+    title: "Je suis plate!",
+    description: "On est plate ou on l'est pas.",
+    images: [
+      {
+        url: "https://jesuisplate.com/imgs/photo.jpg",
+      },
+    ],
+    url: "https://jesuisplate.com",
+  },
 };
 
 export default function RootLayout({
