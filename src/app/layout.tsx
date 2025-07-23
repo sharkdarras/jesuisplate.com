@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "On est plate ou on l'est pas.",
     images: [
       {
-        url: "https://jesuisplate.com/imgs/photo.jpg",
+        url: "https://jesuisplate.com/imgs/the-photo.jpg",
       },
     ],
     url: "https://jesuisplate.com",
