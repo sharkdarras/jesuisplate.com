@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./header";
+import GoogleAnalytics from "./google-analytics";
 
 export const metadata: Metadata = {
   title: "Je suis plate!",
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body className="flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
