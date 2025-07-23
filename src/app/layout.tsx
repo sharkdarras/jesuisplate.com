@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./header";
 import GoogleAnalytics from "./google-analytics";
+import { Countdown } from "./countdown";
 
 export const metadata: Metadata = {
   title: "Je suis plate!",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: "On est plate ou on l'est pas.",
     images: [
       {
-        url: "https://jesuisplate.com/imgs/the-photo.jpg",
+        url: "https://jesuisplate.com/imgs/the-photo.png",
       },
     ],
     url: "https://jesuisplate.com",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="flex flex-col">
         <Header />
         {children}
+        <Countdown />
       </body>
     </html>
   );
